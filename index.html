@@ -154,7 +154,6 @@
         position: fixed;
         right: 0;
         bottom: 0;
-        cursor: pointer;
         width: 8rem;
         transition: opacity 1s ease-in-out;
     }
@@ -177,6 +176,9 @@
 
     #goto_top img {
         width: 100%;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        tap-highlight-color: rgba(0, 0, 0, 0);
+        cursor: pointer;
     }
 
     #goto_top.fly {
