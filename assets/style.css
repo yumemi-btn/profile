@@ -1,6 +1,10 @@
 body {
     color: #14a9b5;
-    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
+}
+
+b, strong, th, h1, h2, h3, h4, h5, h6 {
+	font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI semibold", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic", "Segoe UI", Verdana, Meiryo, sans-serif;
 }
 
 a {
@@ -35,8 +39,8 @@ h3 {
 .col {
     flex: 1;
     border: 5px solid #27bbc8;
-    margin: 1em;
-    padding: 0.5em;
+    margin: 1rem;
+    padding: 0.6rem;
     line-height: 1.4;
 }
 
@@ -52,19 +56,62 @@ hr {
     border: 1px solid;
 }
 
+
+/* 見出し */
+header {
+    position: relative;
+    margin: -0.6rem -0.6rem 0.6rem;
+}
+header h2 {
+    position: absolute;
+    color: #fff;
+    padding: 0.3rem 1rem;
+    margin: 0.6rem -0.6rem 0;
+}
+.yumemi h3, .yumemip h3{
+    color: #fff;
+    padding: 0.3rem 0.6rem;
+    margin: 1rem -0.6rem 0;
+}
+
+/* 色設定: Yumemi #8BDCDD */
+.yumemi,
+.yumemi .cards>li>a {
+    color: #206D6F;
+}
+.yumemi b, .yumemi strong, .yumemi th {
+    color: #298B8E;
+}
+.yumemi h2, .yumemi h3{
+    background-color: #41C3C8;
+}
 .yumemi,
 .yumemi hr {
-    border-color: #61D0D0;
+    border-color: #8BDCDD;
+}
+.yumemi .cards>li>a::before {
+    background-color: #3AC4C4;
 }
 
-.yumemip {
-    color: #DD497A;
+/* 色設定: P #F3799D */
+.yumemip,
+.yumemip .cards>li>a {
+    color: #BC1044;
 }
-
+.yumemip b, .yumemip strong, .yumemip th {
+    color: #E11451;
+}
+.yumemip h2, .yumemip h3{
+    background-color: #F05684;
+}
 .yumemip,
 .yumemip hr {
     border-color: #F3799D;
 }
+.yumemip .cards>li>a::before {
+    background-color: #F3799D;
+}
+
 
 blockquote.twitter-tweet {
     text-align: center;
@@ -83,41 +130,43 @@ blockquote.twitter-tweet::before {
     width: 100% !important;
 }
 
-.yumemi .cards>a {
-    background-color: #3AC4C4;
-}
 
-.yumemip .cards>a {
-    background-color: #F3799D;
+.cards {
+    padding-left: 0;
 }
-
-.cards>a {
-    color: #fff;
-    padding: 0.6em;
-    border-radius: 0.3em;
-    margin: 0.6em 0.3em;
+.cards>li {
+    margin: 0.6rem 0;
+    padding: 0.6rem;
+    padding-left: 3rem;
     display: block;
-    text-decoration: none;
-    background-position: 0.6em;
+    position: relative;
+}
+.cards>li>a::before {
+    background-color: #3AC4C4;
+    height: 100%;
+    width: 2.5em;
+    background-size: 1.5rem;
+    background-position: center center;
     background-repeat: no-repeat;
-    background-size: 1.5em;
-    text-indent: -1em;
-    padding-left: 1.6em;
+    border-radius: 0.3rem;
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url("../img/logo_unknown.svg");
 }
 
-.cards>a[href*="youtu"] {
-    padding-left: 3.5em;
+.cards>li>a[href*="youtu"]::before {
     background-image: url("../img/logo_youtube.png");
 }
 
-.cards>a[href*="twitter"] {
-    padding-left: 3.5em;
-    background-image: url("../img/logo_twitter.png");
+.cards>li>a[href*="twitter"]::before {
+    background-image: url("../img/logo_twitter.svg");
 }
 
-.cards>a[href*="infinite_chain"] {
-    padding-left: 3.5em;
-    background-image: url("../img/logo_cut.png");
+.cards>li>a[href*="infinite_chain"]::before {
+    background-image: url("../img/logo_cut.svg");
 }
 
 #goto_top {
@@ -147,9 +196,9 @@ blockquote.twitter-tweet::before {
 #goto_top img {
     width: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    tap-highlight-color: rgba(0, 0, 0, 0);
     cursor: pointer;
     backface-visibility: hidden;
+    user-select: none;
 }
 
 #goto_top.fly {
