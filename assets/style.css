@@ -1,0 +1,215 @@
+body {
+    color: #14a9b5;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+a {
+    color: #1C2541;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    margin: 0;
+    border-bottom: 2px dashed #27BBC8;
+}
+
+h2,
+h3 {
+    margin: 0;
+}
+
+.row {
+    display: flex;
+}
+
+@media screen and (max-width: 800px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+.col {
+    flex: 1;
+    border: 5px solid #27bbc8;
+    margin: 1em;
+    padding: 0.5em;
+    line-height: 1.4;
+}
+
+.col .col {
+    margin: 0.25em;
+    border-width: 2px;
+    border-left-width: 0;
+    border-right-width: 0;
+}
+
+
+hr {
+    border: 1px solid;
+}
+
+.yumemi,
+.yumemi hr {
+    border-color: #61D0D0;
+}
+
+.yumemip {
+    color: #DD497A;
+}
+
+.yumemip,
+.yumemip hr {
+    border-color: #F3799D;
+}
+
+blockquote.twitter-tweet {
+    text-align: center;
+}
+
+blockquote.twitter-tweet::before {
+    content: "Loading Tweet...";
+}
+
+.twitter-tweet {
+    width: 100% !important;
+    margin: auto;
+}
+
+.twitter-tweet iframe {
+    width: 100% !important;
+}
+
+.yumemi .cards>a {
+    background-color: #3AC4C4;
+}
+
+.yumemip .cards>a {
+    background-color: #F3799D;
+}
+
+.cards>a {
+    color: #fff;
+    padding: 0.6em;
+    border-radius: 0.3em;
+    margin: 0.6em 0.3em;
+    display: block;
+    text-decoration: none;
+    background-position: 0.6em;
+    background-repeat: no-repeat;
+    background-size: 1.5em;
+    text-indent: -1em;
+    padding-left: 1.6em;
+}
+
+.cards>a[href*="youtu"] {
+    padding-left: 3.5em;
+    background-image: url("../img/logo_youtube.png");
+}
+
+.cards>a[href*="twitter"] {
+    padding-left: 3.5em;
+    background-image: url("../img/logo_twitter.png");
+}
+
+.cards>a[href*="infinite_chain"] {
+    padding-left: 3.5em;
+    background-image: url("../img/logo_cut.png");
+}
+
+#goto_top {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 8rem;
+    transition: opacity 1s ease-in-out;
+}
+
+#goto_top:not(.show) {
+    opacity: 0;
+}
+
+#goto_top .anime_rotate {
+    animation: rotate 2.1s ease-in-out infinite alternate;
+}
+
+#goto_top .anime_transX {
+    animation: transX 1s ease-in-out infinite alternate;
+}
+
+#goto_top .anime_transY {
+    animation: transY 1.3s ease-in-out infinite alternate;
+}
+
+#goto_top img {
+    width: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    tap-highlight-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    backface-visibility: hidden;
+}
+
+#goto_top.fly {
+    animation: fly 1s ease-in-out;
+}
+
+#goto_top.fly_egg {
+    animation: fly_egg 1s ease-in-out;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(-25deg)
+    }
+
+    100% {
+        transform: rotate(-35deg)
+    }
+}
+
+@keyframes transY {
+    0% {
+        transform: translateY(-1rem);
+    }
+
+    100% {
+        transform: translateY(-0.5rem);
+    }
+}
+
+@keyframes transX {
+    0% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        transform: translateX(-1.5rem);
+    }
+}
+
+@keyframes fly {
+    0% {
+        transform: translateY(0) rotate(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100vh) rotate(40deg);
+        opacity: 0;
+    }
+}
+
+@keyframes fly_egg {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100vh) translateX(-100vh) rotate(40deg) scale(15);
+        opacity: 0;
+    }
+}
