@@ -71,6 +71,12 @@ header h2 {
     padding: 0.3rem 1rem;
     margin: 0.6rem -0.6rem 0;
 }
+header a span {
+    position: absolute;
+    bottom: 0.6rem;
+    right: 0.6rem;
+    user-select: none;
+}
 h2 {
     color: #fff;
     background-color: #27bbc8;
@@ -85,6 +91,7 @@ h2 {
 
 /* 色設定: Yumemi #8BDCDD */
 .yumemi,
+.yumemi header a span,
 .yumemi .cards>li>a {
     color: #206D6F;
 }
@@ -107,6 +114,7 @@ h2 {
 
 /* 色設定: P #F3799D */
 .yumemip,
+.yumemip header a span,
 .yumemip .cards>li>a {
     color: #BC1044;
 }
