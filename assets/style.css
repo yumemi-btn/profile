@@ -19,7 +19,7 @@ a:hover {
 
 h1 {
     margin: 0 0 0.3rem;
-    border-bottom: 2px dashed #27BBC8;
+    border-bottom: 0.15rem dashed #27BBC8;
 }
 
 h2,
@@ -43,24 +43,19 @@ h3 {
 
 .col {
     flex: 1;
-    border: thick solid #27bbc8;
-    margin: 1rem;
+    outline: 0.3rem solid #27bbc8;
+    margin: 1.3rem;
     line-height: 1.4;
 }
 
 .col .col {
     padding: 0.6rem;
     margin: 0.25em;
-    border-width: 2px;
-    border-left-width: 0;
-    border-right-width: 0;
+    outline: none;
+    border:0.3rem solid #27bbc8;
+    border-width: 0.15rem 0;
     text-overflow: ellipsis;
     overflow-x: hidden;
-}
-
-
-hr {
-    border: 1px solid;
 }
 
 ul {
@@ -86,8 +81,7 @@ header a span {
 h2 {
     color: #fff;
     background-color: #27bbc8;
-    margin: -5px 0 0;
-    padding: 0.1rem 0.3rem;
+    padding: 0 0.3rem 0.3rem;
 }
 .yumemi h3, .yumemip h3 {
     color: #fff;
@@ -109,9 +103,8 @@ h2 {
 .yumemi h2, .yumemi h3{
     background-color: #41C3C8;
 }
-.yumemi,
-.yumemi hr {
-    border-color: #8BDCDD;
+.yumemi {
+    outline-color: #8BDCDD;
 }
 .yumemi .cards>li>a::before {
     background-color: #41C3C8;
@@ -132,9 +125,8 @@ h2 {
 .yumemip h2, .yumemip h3{
     background-color: #F05684;
 }
-.yumemip,
-.yumemip hr {
-    border-color: #F3799D;
+.yumemip {
+    outline-color: #F3799D;
 }
 .yumemip .cards>li>a::before {
     background-color: #F05684;
