@@ -68,6 +68,12 @@ header h2 {
     padding: 0.3rem 1rem;
     margin: 0.6rem -0.6rem 0;
 }
+h2 {
+    color: #fff;
+    background-color: #27bbc8;
+    margin: calc(-0.6rem + -5px) -0.6rem 0.6rem;
+    padding: 0.1rem 0.3rem;
+}
 .yumemi h3, .yumemip h3{
     color: #fff;
     padding: 0.3rem 0.6rem;
