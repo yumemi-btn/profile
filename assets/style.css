@@ -31,12 +31,6 @@ h3 {
     display: flex;
 }
 
-@media screen and (max-width: 800px) {
-    .row {
-        flex-direction: column;
-    }
-}
-
 .content {
     padding: 0.6rem;
 }
@@ -280,5 +274,24 @@ blockquote.twitter-tweet::before {
     100% {
         transform: translateY(-100vh) translateX(-100vh) rotate(40deg) scale(15);
         opacity: 0;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .row {
+        flex-direction: column;
+    }
+    .col {
+        margin: 0.75rem;
+    }
+    header h2 {
+        padding: 0rem 0.6rem;
+        margin-top: 0.3rem;
+        font-size: 1.2rem;
+    }
+
+    #goto_top {
+        width: 6rem;
     }
 }
