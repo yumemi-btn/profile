@@ -75,7 +75,7 @@ Skebご依頼のお供に！公式の見解ではありませんのであしか�
                 </tr>
                 <tr>
                     <th>誕生日</th>
-                    <td>5月24日 (双子座)</td>
+                    <td>5月24日 …… <span id="yumemi_birthday"></span></td>
                 </tr>
                 <tr>
                     <th>年齢</th>
@@ -194,7 +194,7 @@ Skebご依頼のお供に！公式の見解ではありませんのであしか�
                 </tr>
                 <tr>
                     <th>誕生日</th>
-                    <td>11月4日 (さそり座)</td>
+                    <td>11月4日 …… <span id="yumemip_birthday"></span></td>
                 </tr>
                 <tr>
                     <th>年齢</th>
@@ -383,6 +383,26 @@ Skebご依頼のお供に！公式の見解ではありませんのであしか�
             goto_top_elm.classList.remove('show')
         }
     }
+
+
+    function days_until_birthday(month, day) {
+        const today = Date.now()
+        const this_year = new Date((new Date()).getFullYear(), month - 1, day, 24, 0, 0).getTime()
+        const next_yesr = new Date((new Date()).getFullYear() + 1, month - 1, day, 24, 0, 0).getTime()
+
+        if (today < this_year) {
+            return Math.floor((this_year - today) / (60 * 60 * 24 * 1000))
+        } else {
+            return Math.floor((next_yesr - today) / (60 * 60 * 24 * 1000))
+        }
+    }
+
+    const days_until_birthday_yumemi = days_until_birthday(5, 24)
+    document.getElementById('yumemi_birthday').innerText = days_until_birthday_yumemi == 0 ? "🎉🎂本日誕生日🎂🎉" : `あと ${days_until_birthday_yumemi} 日`
+
+    const days_until_birthday_yumemip = days_until_birthday(11, 4)
+    document.getElementById('yumemip_birthday').innerText = days_until_birthday_yumemip == 0 ? "🎉🎂本日誕生日🎂🎉" : `あと ${days_until_birthday_yumemip} 日`
+
 </script>
 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
