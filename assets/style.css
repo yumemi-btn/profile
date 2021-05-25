@@ -106,6 +106,9 @@ h2 {
 .yumemi .cards>li>a::before {
     background-color: #41C3C8;
 }
+.yumemi .col {
+    border-color: #8BDCDD;
+}
 
 /* 色設定: P #F3799D */
 .yumemip,
@@ -127,6 +130,9 @@ h2 {
 }
 .yumemip .cards>li>a::before {
     background-color: #F05684;
+}
+.yumemip .col {
+    border-color: #F3799D;
 }
 
 
@@ -281,7 +287,7 @@ blockquote.twitter-tweet::before {
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .row {
         flex-direction: column;
     }
