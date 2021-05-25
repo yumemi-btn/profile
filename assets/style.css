@@ -287,7 +287,14 @@ blockquote.twitter-tweet::before {
 }
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1300px) {
+    .yumemi.col .row,
+    .yumemip.col .row {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 780px) {
     .row {
         flex-direction: column;
     }
